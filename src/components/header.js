@@ -21,7 +21,11 @@ import {
 } from "./header.css"
 import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
+import styled from 'styled-components';
 
+const Largelink = styled.div`
+  width: 200px;
+`
 export default function Header() {
   const data = useStaticQuery(graphql`
     query {
@@ -74,11 +78,13 @@ export default function Header() {
     <header>
       <Container className={desktopHeaderNavWrapper}>
         <Space size={2} />
-        <Flex variant="spaceBetween">
-          <NavLink to="/">
-            <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
-          </NavLink>
+        <Flex variant="space-between">
+          <Largelink>
+            <NavLink to="/">
+              <VisuallyHidden>Home</VisuallyHidden>
+              <BrandLogo />
+            </NavLink>
+          </Largelink>
           <nav>
             <FlexList gap={4}>
               {navItems &&

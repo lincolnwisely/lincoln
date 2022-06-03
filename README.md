@@ -11,6 +11,21 @@ Create a homepage using Gatsby and Sanity. This starter demonstrates how to use 
 **Note:**
 This version of the Sanity homepage starter is written in JavaScript. If you want to use Sanity but TypeScript is more your style, there is also a TypeScript version maintained on [GitHub](https://github.com/gatsbyjs/gatsby-starter-sanity-homepage-ts).
 
+## Quick re-start
+
+1. **Pick up from where you left off**
+
+   1. In the `studio` directory:
+
+      ```sh
+      yarn start
+
+   2. In your _Gatsby site's directory_, run:
+
+      ```sh
+      yarn start
+      ```
+
 ## Quick start
 
 You will need a Sanity account to use this starter. You can create a new account or use an existing one.
@@ -74,6 +89,17 @@ You will need a Sanity account to use this starter. You can create a new account
    Your site should now be running at <http://localhost:8000>
 
 1. **Open the source code and start editing**
+
+## Issues?
+
+If yarn is acting up:
+
+```sh
+yarn cache clean
+git clean -fdx
+yarn
+yarn start
+```
 
 ## Deploy your site
 
