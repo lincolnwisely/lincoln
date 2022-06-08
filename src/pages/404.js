@@ -3,9 +3,18 @@ import Layout from "../components/layout"
 import { Container, Box, Heading, Text, Link, Flex } from "../components/ui"
 import ChevronRight from "../components/chevron-right"
 import * as styles from "../components/404.css"
+import styled from "styled-components"
+
+const Chillbg = styled.div`
+  background: linear-gradient(-45deg, #efe8f7,#faf8e5,#efe8f7,#faf8e5,#fbe2dc,#faf8e5);
+  background-size: 2000% 2000%;
+  animation: gradient 30s ease infinite;
+`
 
 export default function NotFound() {
   return (
+    <Chillbg>
+
     <Layout title="404: Page not found">
       <Box paddingY={4}>
         <Container>
@@ -27,5 +36,6 @@ export default function NotFound() {
         </Container>
       </Box>
     </Layout>
+  </Chillbg>
   )
 }

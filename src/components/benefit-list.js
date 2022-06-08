@@ -13,7 +13,7 @@ import {
 
 function Benefit(props) {
   return (
-    <Box as="li" width="third" padding={4} paddingY={3}>
+    <Box as="li" width="third" center="true" padding={4} paddingY={3}>
       {props.image && (
         <Icon
           alt={props.image.alt}
@@ -37,7 +37,7 @@ export default function BenefitList(props) {
           {props.text && <Text variant="lead">{props.text}</Text>}
         </Box>
         <Space size={3} />
-        <FlexList gutter={3} variant="start" responsive wrap>
+        <FlexList gutter={3} variant="center" responsive wrap>
           {props.content.map((benefit) => (
             <Benefit key={benefit.id} {...benefit} />
           ))}

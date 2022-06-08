@@ -5,5 +5,6 @@ export default {
   fields: [
     { title: "Image", name: "image", type: "image" },
     { title: "Alt", name: "alt", type: "string" },
+    { title: "Link", name: "link", type: "string" },
   ],
 }

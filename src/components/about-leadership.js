@@ -14,14 +14,15 @@ import {
 
 function AboutProfile(props) {
   return (
-    <Box width="third" padding={4} center>
+    <Box width="third" padding={2} center>
       {props.image && (
         <GatsbyImage
+          fixed={200}
           alt={props.image.alt}
           image={getImage(props.image.gatsbyImageData)}
         />
       )}
-      <Space size={3} />
+      <Space size={2} />
       <Box>
         {props.name && (
           <Text variant="medium" bold center>

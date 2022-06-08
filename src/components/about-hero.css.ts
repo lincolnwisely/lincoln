@@ -11,7 +11,8 @@ export const aboutHeroHeader = style({
 export const aboutHeroText = style({
   fontSize: theme.fontSizes[3],
   marginBottom: theme.space[5],
-  maxWidth: "798px",
+  marginRight: theme.space[8],
+  maxWidth: "498px",
   "@media": {
     [media.small]: {
       fontSize: theme.fontSizes[4],
@@ -20,5 +21,5 @@ export const aboutHeroText = style({
 })
 
 export const aboutHeroImage = style({
-  width: "100%",
+  width: "25%",
 })

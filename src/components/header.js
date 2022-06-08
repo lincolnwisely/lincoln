@@ -25,6 +25,7 @@ import styled from 'styled-components';
 
 const Largelink = styled.div`
   width: 200px;
+  margin-right: 300px;
 `
 export default function Header() {
   const data = useStaticQuery(graphql`

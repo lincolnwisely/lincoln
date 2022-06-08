@@ -1,24 +1,8 @@
 import * as React from "react"
-import styled from "styled-components";
 
-const logoStyle = styled.div`
-.cls-1,
-.cls-3 {
-  fill:#231f20;
-}
-.cls-1 {
-  stroke:#fff;
-}
-.cls-1,
-.cls-2 {
-  stroke-miterlimit:10;
-}
-.cls-2 {
-  fill:#fff;
-  stroke:#231f20;
-  stroke-width:3px;
-  }
-`
+
+
+
 
 export default function BrandLogo() {
   return (
