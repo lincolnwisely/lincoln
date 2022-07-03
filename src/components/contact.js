@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"   
 
 const ContactForm = () => {
   // Initiate forms
@@ -23,32 +23,35 @@ const ContactForm = () => {
         type="hidden"
         name="formId"
         value="contact-form"
-        ref={{...register('formId')}}
+        {...register('formId')}
       />
       <label htmlFor="name">
         <p>Name</p>
         {errors && errors.name && <span>Error message</span>}
-        <input  ref={{...register('name', { 
+        <input  {...register('name', { 
           required: true })
-          }} />
+          } />
       </label>
       <label htmlFor="email">
         <p>Email</p>
         {errors && errors.email && <span>Please format email correctly</span>}
         <input
-          ref={{...register('email', { 
+          {...register('email', { 
             required: true,
             pattern: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
             })
-          }}
+          }
         />
       </label>
       <label htmlFor="message">
         <p>Message</p>
-        <textarea rows="4" name="message" ref={{...register('name', {
+        <textarea rows="4" name="message" {...register('name', {
           required: true,
         })
-        }} />
+        } />
+      </label>
+        <input type="checkbox" required name="consent" />
+      <label htmlFor="consent">I understand that I may never hear back from Lincoln
       </label>
       <label
         htmlFor="got-ya"
@@ -64,7 +67,7 @@ const ContactForm = () => {
         }}
       >
         Don’t fill this out if you're human:
-        <input tabIndex="-1" name="got-ya" ref={{...register('got-ya')}} />
+        <input tabIndex="-1" name="got-ya" {...register('got-ya')} />
       </label>
       <div>
         <button type="submit">Submit</button>

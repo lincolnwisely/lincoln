@@ -2,12 +2,14 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import {
   Twitter,
-  Twitch,
+  Twitch, 
+  Linkedin,
   Instagram,
   Facebook,
   Youtube,
   GitHub,
 } from "react-feather"
+import DiscogsLogo from "./discogs"
 import {
   Container,
   Flex,
@@ -37,6 +39,11 @@ const socialMedia = {
     name: "Facebook",
     icon: <Facebook />,
   },
+  LINKEDIN: {
+    url: "https://linkedin.com/in/",
+    name: "linkedin",
+    icon: <Linkedin />,
+  },
   YOUTUBE: {
     url: "https://youtube.com",
     name: "YouTube",
@@ -52,6 +59,11 @@ const socialMedia = {
     name: "Twitch",
     icon: <Twitch />,
   },
+  DISCOGS: {
+    url: "discogs.com", 
+    name: "Discogs", 
+    icon: <DiscogsLogo />
+  }
 }
 
 const getSocialURL = ({ service, username }) => {

@@ -40,6 +40,20 @@ function AboutProfile(props) {
 }
 
 export default function AboutLeadership(props) {
+const createGifs = () => {
+
+  let gifs = []
+ 
+     for (let i = 0; i < 5; i++) {
+ 
+       gifs.push(
+           <AboutProfile key={i} {...props.content}/>)
+     }
+     return gifs
+   }
+
+
+
   return (
     <Section>
       <Container width="tight">
@@ -49,14 +63,14 @@ export default function AboutLeadership(props) {
           {props.subhead && <Text>{props.subhead}</Text>}
         </Box>
         <FlexList gap={0} variant="center" alignItems="start">
-          {props.content.map((profile) => (
-            <AboutProfile key={profile.id} {...profile} />
-          ))}
+
+          {createGifs()}
         </FlexList>
       </Container>
     </Section>
   )
 }
+
 
 export const query = graphql`
   fragment AboutLeadershipContent on AboutLeadership {
