@@ -9,7 +9,9 @@ import {
   Youtube,
   GitHub,
 } from "react-feather"
-import DiscogsLogo from "./discogs"
+
+import  { SiDiscogs } from "react-icons/si"
+
 import {
   Container,
   Flex,
@@ -60,9 +62,9 @@ const socialMedia = {
     icon: <Twitch />,
   },
   DISCOGS: {
-    url: "discogs.com", 
-    name: "Discogs", 
-    icon: <DiscogsLogo />
+    url: "https://discogs/",
+    name: "Discogs",
+    icon: <SiDiscogs />,
   }
 }
 

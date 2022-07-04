@@ -17,6 +17,7 @@ export default {
           { title: "GitHub", value: "GITHUB" },
           { title: "Discord", value: "DISCORD" },
           { title: "Twitch", value: "TWITCH" },
+          { title: "Discogs", value: "DISCOGS" },
         ],
       },
     },
