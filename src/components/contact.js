@@ -1,78 +1,83 @@
 import React from 'react';
-import { useForm } from "react-hook-form"   
+import { useState, setState } from "react";
+import { send } from 'emailjs-com';
 
+import * as styles from './contact.css.ts';
 const ContactForm = () => {
   // Initiate forms
-  const { register, handleSubmit, errors, reset } = useForm()
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    message: '',
+    reply_to: '',
+  });
 
-  const handlePost = (formData) => {
-    console.log(formData)
+const [isSubmited, setIsSubmited] = useState(false);
+
+
+const onSubmit = (e) => {
+    e.preventDefault();
+    send(
+      'service_kc2asid',
+      'template_uuxlcyn',
+      toSend,
+      'E5iEwRvVHBMDGsqS4'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setIsSubmited(true);
+          
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+  
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
+  const thanks = () => {
+
   }
-
   return (
-    <form
-      onSubmit={handleSubmit(handlePost)}
-      name="contact-form"
-      method="POST"
-      action="/success/"
-      data-netlify="true"
-      netlify-honeypot="got-ya"
-    >
-      <input type="hidden" name="form-name" value="contact-form" />
-      <input
-        type="hidden"
-        name="formId"
-        value="contact-form"
-        {...register('formId')}
-      />
-      <label htmlFor="name">
-        <p>Name</p>
-        {errors && errors.name && <span>Error message</span>}
-        <input  {...register('name', { 
-          required: true })
-          } />
-      </label>
-      <label htmlFor="email">
-        <p>Email</p>
-        {errors && errors.email && <span>Please format email correctly</span>}
-        <input
-          {...register('email', { 
-            required: true,
-            pattern: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
-            })
-          }
-        />
-      </label>
-      <label htmlFor="message">
-        <p>Message</p>
-        <textarea rows="4" name="message" {...register('name', {
-          required: true,
-        })
-        } />
-      </label>
-        <input type="checkbox" required name="consent" />
-      <label htmlFor="consent">I understand that I may never hear back from Lincoln
-      </label>
-      <label
-        htmlFor="got-ya"
-        style={{
-          position: "absolute",
-          overflow: "hidden",
-          clip: "rect(0 0 0 0)",
-          height: "1px",
-          width: "1px",
-          margin: "-1px",
-          padding: "0",
-          border: "0",
-        }}
-      >
-        Don’t fill this out if you're human:
-        <input tabIndex="-1" name="got-ya" {...register('got-ya')} />
-      </label>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+isSubmited ? (
+  <div className={styles.success}>you did it! thank you</div>
+) : (
+
+
+<form className={styles.form} onSubmit={onSubmit}  id="contact-form" >
+  <input
+    className={styles.input}
+    type='text'
+    name='from_name'
+    placeholder='from name'
+    value={toSend.from_name}
+    onChange={handleChange}
+  />
+  <input
+    className={styles.input}
+    type='text'
+    name='message'
+    placeholder='Your message'
+    value={toSend.message}
+    onChange={handleChange}
+  />
+  <input
+    className={styles.input}
+    type='text'
+    name='reply_to'
+    placeholder='Your email'
+    value={toSend.reply_to}
+    onChange={handleChange}
+  />
+  <div>
+   <input 
+  type="checkbox" required name="consent" readOnly checked />
+    <label className={styles.checkboxLabel} htmlFor="consent">I understand that I may never hear back</label></div>
+
+    <button className={styles.button } type="submit">Submit</button>
+</form> 
+  )
   )
 }
 
