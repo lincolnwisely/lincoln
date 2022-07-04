@@ -4,11 +4,11 @@ import { media } from "./ui.css"
 
 // specific maxWidths are to support design and
 // current length of content in the Header and Text
-export const aboutHeroHeader = style({
+export const heroHeader = style({
   maxWidth: "1108px",
 })
 
-export const aboutHeroText = style({
+export const heroText = style({
   fontSize: theme.fontSizes[3],
   marginBottom: theme.space[5],
   marginRight: theme.space[8],
@@ -20,6 +20,6 @@ export const aboutHeroText = style({
   },
 })
 
-export const aboutHeroImage = style({
-  width: "25%",
+export const heroImage = style({
+  width: "100%",
 })

@@ -564,6 +564,18 @@ export const avatar = style({
   borderRadius: theme.radii.circle,
 })
 
+export const linkedImg = style({
+  cursor: "pointer",
+  display: "flex", 
+})
+
+export const brandLogoStyles = style({
+  minWidth: "200px",
+  maxWidth: "100%",
+  marginTop: "30px",
+  marginBottom: "30px"
+})
+
 export type LogoSizes = "small" | "medium"
 
 export const logos: Record<LogoSizes, string> = styleVariants({
@@ -575,6 +587,7 @@ export const logos: Record<LogoSizes, string> = styleVariants({
     maxWidth: "128px",
   },
 })
+
 
 export type IconSizes = "small" | "medium" | "large"
 

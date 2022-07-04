@@ -41,7 +41,7 @@ const onSubmit = (e) => {
   }
   return (
 isSubmited ? (
-  <div className={styles.success}>you did it! thank you</div>
+  <div className={styles.success}>Done! thank you.</div>
 ) : (
 
 

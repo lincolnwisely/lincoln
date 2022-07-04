@@ -1,11 +1,11 @@
 import { style, styleVariants } from "@vanilla-extract/css"
 import { theme } from "../theme.css"
-import { media } from "./ui.css"
+import { blockLink, media } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
   position: "relative",
   zIndex: 1,
-  display: "none",
+  display: "block",
   "@media": {
     [media.small]: {
       display: "block",
@@ -17,10 +17,11 @@ export const desktopHeaderNavWrapper = style({
 const mobileHeaderNavWrapperBase = style({
   display: "block",
   position: "relative",
+  width: "100vw",
   paddingTop: theme.space[3],
   "@media": {
     [media.small]: {
-      display: "none",
+      display: "block",
     },
   },
 })

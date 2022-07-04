@@ -12,21 +12,14 @@ import {
   Subhead,
   Text,
 } from "./ui"
+import * as styles from "./hero.css"
 
 export default function Hero(props) {
   return (
     <Section>
       <Container>
-        <Flex gap={4} variant="responsive">
-          <Box width="half">
-            {props.image && (
-              <GatsbyImage
-                alt={props.image.alt}
-                image={getImage(props.image.gatsbyImageData)}
-              />
-            )}
-          </Box>
-          <Box width="half">
+        <Flex justifyContent="spaceBetween" variant="responsive">
+          <Box width="third">
             <Heading as="h1">
               {props.kicker && <Kicker>{props.kicker}</Kicker>}
               {props.h1}
@@ -35,7 +28,19 @@ export default function Hero(props) {
             <Text as="p">{props.text}</Text>
             <ButtonList links={props.links} />
           </Box>
+          <Box width="third">
+            {props.image && (
+              <GatsbyImage
+                alt={props.image.alt}
+                image={getImage(props.image.gatsbyImageData)}
+                className={styles.heroImage}
+              />
+            )}
+          </Box>
         </Flex>
+
+
+   
       </Container>
     </Section>
   )

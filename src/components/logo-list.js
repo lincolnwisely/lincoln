@@ -1,14 +1,14 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Space, Container, Section, FlexList, Text, Logo } from "./ui"
-
+import * as styles from './ui.css.ts'
 export function LogoItem(props) {
   if (!props.image) return null
 
    if ( props.link ) {
      return (
 
-       <a href={props.link} alt='link to '>
+       <a className={styles.linkedImg} href={props.link} alt={`link to ${props.alt}`}>
        <Logo alt={props.alt} image={props.image.gatsbyImageData} size="medium" />
        </a>
        )

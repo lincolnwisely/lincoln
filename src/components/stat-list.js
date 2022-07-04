@@ -26,19 +26,17 @@ function Stat(props) {
 
 export default function StatList(props) {
   return (
-    <Container width="fullbleed">
-      <Section padding={5} radius="large" background="primary">
+    <Container>
+      <Section width="90" padding={5} radius="large" background="primary">
         <Flex responsive variant="end">
-          <Box width="half">
-            {props.icon && (
-              <Icon alt={props.icon.alt} image={props.icon.gatsbyImageData} />
-            )}
+          <Box width="full">
+     
             <Heading>
               {props.kicker && <Kicker>{props.kicker}</Kicker>}
               {props.heading}
             </Heading>
             {props.text && <Text variant="lead">{props.text}</Text>}
-            <FlexList wrap gap={4}>
+            <FlexList wrap gap={6}>
               {props.content.map((stat) => (
                 <li key={stat.id}>
                   <Stat {...stat} />
@@ -47,16 +45,7 @@ export default function StatList(props) {
             </FlexList>
             <ButtonList links={props.links} reversed />
           </Box>
-          <Box width="half">
-            {props.image && (
-              <Nudge right={5} bottom={5}>
-                <GatsbyImage
-                  alt={props.image.alt}
-                  image={getImage(props.image.gatsbyImageData)}
-                />
-              </Nudge>
-            )}
-          </Box>
+        
         </Flex>
       </Section>
     </Container>
