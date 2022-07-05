@@ -62,7 +62,7 @@ const socialMedia = {
     icon: <Twitch />,
   },
   DISCOGS: {
-    url: "https://discogs/",
+    url: "https://discogs.com/user",
     name: "Discogs",
     icon: <SiDiscogs />,
   }
@@ -71,7 +71,11 @@ const socialMedia = {
 const getSocialURL = ({ service, username }) => {
   const domain = socialMedia[service]?.url
   if (!domain) return false
-  return `${domain}/${username}`
+  if (domain === 'https://discogs.com/user') {
+    return `${domain}/${username}/collection`
+  } else {
+    return `${domain}/${username}`
+  }
 }
 
 const getSocialIcon = ({ service }) => {

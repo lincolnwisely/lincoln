@@ -1,6 +1,5 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   Container,
   Section,
@@ -10,9 +9,7 @@ import {
   Heading,
   Flex,
   Box,
-  Icon,
   ButtonList,
-  Nudge,
 } from "./ui"
 
 function Stat(props) {

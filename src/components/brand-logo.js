@@ -1,9 +1,9 @@
 import * as React from "react"
 import * as styles from "./ui.css"
 export default function BrandLogo(props) {
-  const className = props
+  let className = props
 
-  if (className.length == 0) {
+  if (className.length === 0) {
     className = styles.brandLogoStyles
   }
   console.log('className', className);

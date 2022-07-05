@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, setState } from "react";
+import { useState } from "react";
 import { send } from 'emailjs-com';
 
 import * as styles from './contact.css.ts';
@@ -36,9 +36,6 @@ const onSubmit = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const thanks = () => {
-
-  }
   return (
 isSubmited ? (
   <div className={styles.success}>Done! thank you.</div>
