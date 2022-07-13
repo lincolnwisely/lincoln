@@ -18,11 +18,10 @@ import {
   desktopHeaderNavWrapper,
   mobileHeaderNavWrapper,
   mobileNavSVGColorWrapper,
-  brandLogoStyles
 } from "./header.css"
 import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
-import styled from 'styled-components';
+import { brandLogoStyles } from './ui.css';
 
 // const Largelink = styled.div`
 //   width: 200px;
