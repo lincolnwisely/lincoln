@@ -44,8 +44,9 @@ export const button = style({
 })
 
 export const success = style({
-  height: "400px",
+  height: "40px",
   fontSize: "24px",
   marginLeft: "auto",
   marginRight: "auto",
+  marginTop: "30px"
 })

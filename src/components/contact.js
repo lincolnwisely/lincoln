@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from "react";
-import { send } from 'emailjs-com';
 
 import * as styles from './contact.css.ts';
 const ContactForm = () => {
@@ -11,25 +10,10 @@ const ContactForm = () => {
     reply_to: '',
   });
 
-const [isSubmited, setIsSubmited] = useState(false);
+const [isSubmitted, setIsSubmitted] = useState(false);
 
-
-const onSubmit = (e) => {
-    e.preventDefault();
-    send(
-      'service_kc2asid',
-      'template_uuxlcyn',
-      toSend,
-      'E5iEwRvVHBMDGsqS4'
-    )
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setIsSubmited(true);
-          
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-      });
+const handleSubmit = (event) => {
+   setIsSubmitted(!isSubmitted)
   };
   
   const handleChange = (e) => {
@@ -37,12 +21,8 @@ const onSubmit = (e) => {
   };
 
   return (
-isSubmited ? (
-  <div className={styles.success}>Done! thank you.</div>
-) : (
 
-
-<form className={styles.form} onSubmit={onSubmit}  id="contact-form" >
+    <form className={styles.form} method="POST" action="https://getform.io/f/ceeb9899-b9c6-474c-ac4d-6baeefe618a7" id="contact-form" onSubmit={handleSubmit} >
   <input
     className={styles.input}
     type='text'
@@ -69,13 +49,19 @@ isSubmited ? (
   />
   <div>
    <input 
-  type="checkbox" required name="consent" readOnly checked />
-    <label className={styles.checkboxLabel} htmlFor="consent">I understand that I may never hear back</label></div>
+  type="checkbox" required name="anxietyClause" readOnly checked />
+        <label className={styles.checkboxLabel} htmlFor="anxietyClause">I understand that I may never hear back</label></div>
 
     <button className={styles.button } type="submit">Submit</button>
+      {isSubmitted && (
+        <div className={styles.success}>drumroll</div>
+        )}
+      
+       
+            
 </form> 
   )
-  )
+  
 }
 
 export default ContactForm
