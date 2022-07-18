@@ -26,7 +26,7 @@ export default function Hero(props) {
             </Heading>
             <Subhead as="h2">{props.subhead}</Subhead>
             <Text as="p">{props.text}</Text>
-            <ButtonList links={props.links} />
+            <ButtonList link links={props.links} />
           </Box>
           <Box width="third">
             {props.image && (

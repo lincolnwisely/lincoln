@@ -177,7 +177,7 @@ export function ButtonList({ links = [], reversed = false, ...props }) {
       {links &&
         links.map((link, i) => (
           <li key={link.id}>
-            <Button href={link.href} variant={getVariant(i)}>
+            <Button href={link.href} variant='primary'>
               {link.text}
             </Button>
           </li>

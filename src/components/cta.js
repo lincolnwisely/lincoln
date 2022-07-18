@@ -15,7 +15,7 @@ import {
 export default function HomepageCta(props) {
   return (
     <Container>
-      <Section padding={5} radius="large" background="primary">
+      <Section padding={4} radius="large" background="primary">
         <Heading center>
           {props.kicker && <Kicker center>{props.kicker}</Kicker>}
           {props.heading}
@@ -24,15 +24,6 @@ export default function HomepageCta(props) {
           {props.text}
         </Text>
         <ContactForm/>
-        <ButtonList links={props.links} variant="center" reversed />
-        {props.image && (
-          <Nudge left={5} right={5} bottom={5}>
-            <GatsbyImage
-              alt={props.image.alt}
-              image={getImage(props.image.gatsbyImageData)}
-            />
-          </Nudge>
-        )}
       </Section>
     </Container>
   )

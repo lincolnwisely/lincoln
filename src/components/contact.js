@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from "react";
-
 import * as styles from './contact.css.ts';
 const ContactForm = () => {
   // Initiate forms
@@ -22,10 +21,11 @@ const handleSubmit = (event) => {
 
   return (
 
-    <form className={styles.form} method="POST" action="https://getform.io/f/ceeb9899-b9c6-474c-ac4d-6baeefe618a7" id="contact-form" onSubmit={handleSubmit} >
+  <form className={styles.form} method="POST" action="https://getform.io/f/ceeb9899-b9c6-474c-ac4d-6baeefe618a7" id="contact-form" onSubmit={handleSubmit} >
   <input
     className={styles.input}
     type='text'
+    required
     name='from_name'
     placeholder='from name'
     value={toSend.from_name}
@@ -34,6 +34,7 @@ const handleSubmit = (event) => {
   <input
     className={styles.input}
     type='text'
+    required
     name='message'
     placeholder='Your message'
     value={toSend.message}
@@ -52,7 +53,7 @@ const handleSubmit = (event) => {
   type="checkbox" required name="anxietyClause" readOnly checked />
         <label className={styles.checkboxLabel} htmlFor="anxietyClause">I understand that I may never hear back</label></div>
 
-    <button className={styles.button } type="submit">Submit</button>
+    <button className={styles.button} type="submit">Submit</button>
       {isSubmitted && (
         <div className={styles.success}>drumroll</div>
         )}

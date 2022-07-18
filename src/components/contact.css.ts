@@ -30,17 +30,18 @@ export const checkboxLabel = style({
 })
 
 export const button = style({
-  padding: "10px",
+  padding: "16px",
   marginTop: "20px",
-  width: "200px",
-  fontSize: "18px",
+  width: "80%",
+  maxWidth: "300px",
+  fontSize: "20px",
   marginLeft: "auto",
   marginRight: "auto",
-  borderRadius: '30px',
+  borderRadius: '10px',
   border: "none",
   color: "#fff",
   fontWeight: "bold",
-  backgroundColor: "#FF4122"
+  backgroundColor: "#f14e41",
 })
 
 export const success = style({

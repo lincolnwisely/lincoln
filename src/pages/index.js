@@ -6,8 +6,8 @@ import Fallback from "../components/fallback"
 import styled from "styled-components"
 
 const Chillbg = styled.div`
-  background: linear-gradient(-45deg, #efe8f7,#faf8e5,#efe8f7,#faf8e5,#fbe2dc,#faf8e5);
-  background-size: 2000% 2000%;
+  background: linear-gradient(-45deg, #efe8f7,#faf8e5,#efe8f7,#faf8e5,#efe8f7,#faf8e5);
+  background-size: 800vw 800vw;
   animation: gradient 30s ease infinite;
 `
 

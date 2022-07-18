@@ -480,13 +480,15 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
   primary: [
     button,
     {
-      color: theme.colors.background,
-      backgroundColor: theme.colors.primary,
+      color: theme.colors.white,
+      backgroundColor: theme.colors.muted,
       ":hover": {
-        backgroundColor: theme.colors.active,
+        color: theme.colors.black,
+        backgroundColor: theme.colors.background,
       },
       ":focus": {
-        backgroundColor: theme.colors.active,
+        color: theme.colors.black,
+        backgroundColor: theme.colors.background,
       },
     },
   ],
