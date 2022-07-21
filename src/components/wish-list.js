@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
   Box,
+  Button,
   Logo, 
   FlexList, 
   Container,
@@ -74,9 +75,6 @@ return ( <Box paddingY={5}>
     <Heading center>
       recently added to my want list
     </Heading>
-    <Subhead center variant="lead">
-      <OutboundLink center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All</OutboundLink>
-    </Subhead>
       <Slider className={miscstyles.sliderButton} {...settings}>
         { items && items.wants.map((item) => {
           return  <OutboundLink href={`https://discogs.com/master/${item.basic_information.master_id}`} className={styles.item}key={item.id}>
@@ -86,6 +84,10 @@ return ( <Box paddingY={5}>
           </OutboundLink>    
         })}
         </Slider>
+        <Subhead center variant="lead">
+          <Button className={styles.link} center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All
+          </Button>
+        </Subhead>
       </Box>
     );
   };
