@@ -18,7 +18,7 @@ export const item = style({
     width: "30%",
     minHeight: "250px",
     justifyContent: "center",
-    padding: "50px",
+    // padding: "50px",
     },
   },
 })

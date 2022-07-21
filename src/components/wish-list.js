@@ -3,12 +3,8 @@ import axios from "axios";
 import {
   Box,
   Button,
-  Logo, 
-  FlexList, 
-  Container,
     Heading,
     Subhead,
-  Section,
   Text
 
 } from "./ui"
@@ -39,16 +35,13 @@ export default function WishList()  {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
-            dots: true
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 700,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            initialSlide: 2
           }
         },
         {
@@ -69,7 +62,6 @@ export default function WishList()  {
          setItems(response.data);
       });
    }, []);
-console.log(items)
 return ( <Box paddingY={5}>
     <Text center variant="kicker">discogs has an api tight</Text>
     <Heading center>
@@ -85,7 +77,7 @@ return ( <Box paddingY={5}>
         })}
         </Slider>
         <Subhead center variant="lead">
-          <Button className={styles.link} center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All
+          <Button className={styles.link} center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All / buy me one
           </Button>
         </Subhead>
       </Box>

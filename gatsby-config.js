@@ -25,11 +25,11 @@ module.exports = {
       options: {
         name: "Lincoln Wisely Website",
         short_name: "Lincoln Wisely",
-        start_url: "/",
         // These can be imported once ESM support lands
         background_color: "#ffe491",
         theme_color: "#004ca3",
         icon: "src/favicon.png",
+        crossOrigin: `use-credentials`
       },
     },
     {

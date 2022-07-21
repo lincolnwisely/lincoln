@@ -27,7 +27,7 @@ const handleSubmit = (event) => {
     type='text'
     required
     name='from_name'
-    placeholder='from name'
+    placeholder='Your Name'
     value={toSend.from_name}
     onChange={handleChange}
   />
@@ -36,7 +36,7 @@ const handleSubmit = (event) => {
     type='text'
     required
     name='message'
-    placeholder='Your message'
+    placeholder='Your Message'
     value={toSend.message}
     onChange={handleChange}
   />
@@ -44,7 +44,7 @@ const handleSubmit = (event) => {
     className={styles.input}
     type='text'
     name='reply_to'
-    placeholder='Your email'
+    placeholder='Your Email'
     value={toSend.reply_to}
     onChange={handleChange}
   />

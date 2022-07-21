@@ -26,7 +26,6 @@ function Stat(props) {
 }
 
 export default function StatList(props) {
-  console.log('props', props)
   return (
     <>
     <Container>
