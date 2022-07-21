@@ -77,7 +77,7 @@ return ( <Box paddingY={5}>
         })}
         </Slider>
         <Subhead center variant="lead">
-          <Button className={styles.link} center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All / buy me one
+          <Button center href="https://www.discogs.com/wantlist?user=lincolnwisely">View All
           </Button>
         </Subhead>
       </Box>

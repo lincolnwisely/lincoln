@@ -13,9 +13,6 @@ import {
 } from "./ui"
 import WishList from "./wish-list"
 
-export {  WishList } from "./wish-list"
-
-
 function Stat(props) {
   return (
     <Box>

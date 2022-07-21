@@ -1,25 +1,15 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Menu, X } from "react-feather"
 import {
   Container,
   Flex,
-  FlexList,
-  Space,
   NavLink,
   Button,
-  InteractiveIcon,
-  Nudge,
   VisuallyHidden,
 } from "./ui"
 import {
-  mobileNavOverlay,
-  mobileNavLink,
   desktopHeaderNavWrapper,
-  mobileHeaderNavWrapper,
-  mobileNavSVGColorWrapper,
 } from "./header.css"
-import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
 import { brandLogoStyles } from './ui.css';
 
@@ -64,16 +54,9 @@ export default function Header() {
     }
   `)
 
-  const { navItems, cta } = data.layout.header
-  const [isOpen, setOpen] = React.useState(false)
+  const { cta } = data.layout.header
 
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflowY = "hidden"
-    } else {
-      document.body.style.overflowY = "visible"
-    }
-  }, [isOpen])
+
 
   return (
     <header>

@@ -2,12 +2,10 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import ContactForm from './contact'
 import {
-  Nudge,
   Container,
   Section,
   Heading,
   Text,
-  ButtonList,
   Kicker,
 } from "./ui"
 

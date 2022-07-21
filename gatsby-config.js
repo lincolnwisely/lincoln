@@ -26,8 +26,8 @@ module.exports = {
         name: "Lincoln Wisely Website",
         short_name: "Lincoln Wisely",
         // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
+        background_color: "#ff0",
+        theme_color: "#0A2728",
         icon: "src/favicon.png",
         crossOrigin: `use-credentials`
       },
