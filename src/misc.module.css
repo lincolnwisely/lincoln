@@ -1,0 +1,21 @@
+.sliderButton button {
+  color: yellow !important;
+  height: 30px;
+  width: 40px;
+}
+
+.sliderButton button:before {
+color: #0A2728;
+  height: 30px;
+  width: 40px;
+  font-size: 40px;
+  opacity: 1;
+}
+
+.sliderButton button.slick-prev {
+  left: -50 !important;
+}
+
+.sliderButton button.slick-next {
+  right: -50 !important;
+}

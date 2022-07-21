@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Space, Container, Section, FlexList, Text, Logo } from "./ui"
 import * as styles from './ui.css.ts'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
   function deflate(e) {
     e.target.style.transform = 'scale(.9)';
@@ -23,16 +24,16 @@ export function LogoItem(props) {
    if ( props.link ) {
      return (
 
-       <a onMouseOver={deflate} onMouseOut={reflate} className={styles.linkedImg} href={props.link} alt={`link to ${props.alt}`}>
-       <Logo alt={props.alt} image={props.image.gatsbyImageData} size="medium" />
-       </a>
+       <OutboundLink onMouseOver={deflate} onMouseOut={reflate} className={styles.linkedImg} href={props.link} alt={`link to ${props.alt}`}>
+       <Logo alt={props.alt ?? ""} image={props.image.gatsbyImageData} size="medium" />
+       </OutboundLink>
        )
 
    } else {
 return (
 
 
-   <Logo alt={props.alt} image={props.image.gatsbyImageData} size="medium" />
+   <Logo alt={props.alt ?? ""} image={props.image.gatsbyImageData} size="medium" />
 )
   }
 
@@ -44,7 +45,7 @@ export default function LogoList(props) {
     <Section paddingY={4}>
       <Container width="narrow">
         {props.text && (
-          <Text center variant="lead">
+          <Text center variant="kicker">
             {props.text}
           </Text>
         )}

@@ -11,6 +11,10 @@ import {
   Box,
   ButtonList,
 } from "./ui"
+import WishList from "./wish-list"
+
+export {  WishList } from "./wish-list"
+
 
 function Stat(props) {
   return (
@@ -22,7 +26,9 @@ function Stat(props) {
 }
 
 export default function StatList(props) {
+  console.log('props', props)
   return (
+    <>
     <Container>
       <Section width="90" padding={5} radius="large" background="primary">
         <Flex responsive variant="end">
@@ -46,6 +52,15 @@ export default function StatList(props) {
         </Flex>
       </Section>
     </Container>
+    <Container>
+      
+      <Section >
+        <Container>
+          <WishList/>
+          </Container>
+      </Section>
+    </Container>
+    </>
   )
 }
 

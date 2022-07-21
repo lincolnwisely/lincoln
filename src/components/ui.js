@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import isAbsoluteURL from "is-absolute-url"
 import * as React from "react"
 import * as styles from "./ui.css"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export const cx = (...args) => args.filter(Boolean).join(" ")
 
@@ -162,7 +163,7 @@ export function NavButtonLink({ ...props }) {
 }
 
 export function Button({ variant = "primary", ...props }) {
-  return <Base as={Link} cx={[styles.buttons[variant]]} {...props} />
+  return <Base as={OutboundLink} cx={[styles.buttons[variant]]} {...props} />
 }
 
 export function ButtonList({ links = [], reversed = false, ...props }) {
@@ -226,7 +227,7 @@ export function Logo({ alt, image, size = "small" }) {
 export function Icon({ alt, image, size = "medium" }) {
   return (
     <GatsbyImage
-      alt={alt}
+      alt={alt ?? ""}
       image={getImage(image)}
       className={styles.icons[size]}
     />

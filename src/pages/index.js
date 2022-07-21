@@ -13,7 +13,6 @@ const Chillbg = styled.div`
 
 export default function Homepage(props) {
   const { homepage } = props.data
-
   return (
     <Chillbg>        
       <Layout {...homepage}>
