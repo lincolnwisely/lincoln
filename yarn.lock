@@ -6177,6 +6177,11 @@
   dependencies:
     "@babel/runtime" "^7.15.4"
 
+"gatsby-plugin-remove-serviceworker@^1.0.0":
+  "integrity" "sha512-8uQ/6PiM718BTZAgmQeEO6ULrJgLugmDVAkUGv5xxF0luBNrbboDgpsG0z1fbsotSDTzLWyULR0zzGNfWZaY7w=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-remove-serviceworker/-/gatsby-plugin-remove-serviceworker-1.0.0.tgz"
+  "version" "1.0.0"
+
 "gatsby-plugin-sharp@^4.0.0-next", "gatsby-plugin-sharp@^4.9.1":
   "integrity" "sha512-jnzFbQBuuKG3AxFgaxCgn9r3R3vToSsgpq/HzRvIxK1o1gh7z2gHCTnvquz1RhMGr3qjZGXlZe8mlAfhk3a/rQ=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.15.0.tgz"

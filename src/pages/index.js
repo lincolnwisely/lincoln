@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 const Chillbg = styled.div`
   background: linear-gradient(-45deg, #efe8f7,#faf8e5,#efe8f7,#faf8e5,#efe8f7,#faf8e5);
-  background-size: 100% 200%;
+  background-size: 1000% 2000%;
   background-repeat: repeat;
   animation: gradient 30s ease infinite;
 `

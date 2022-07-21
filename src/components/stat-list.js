@@ -50,7 +50,7 @@ export default function StatList(props) {
     </Container>
     <Container>
       
-      <Section >
+      <Section>
         <Container>
           <WishList/>
           </Container>

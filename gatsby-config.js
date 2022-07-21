@@ -30,6 +30,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
+    'gatsby-plugin-remove-serviceworker',
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
