@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const client = axios.create({
-  baseURL: "https://api.discogs.com/users/lincolnwisely/wants?key=vFyJrqHWRBnpgvvXUkco&secret=fIyvkSIOTpqWKiSaDwMAWGsbVUnLVwwL&page=1&per_page=18" 
+  baseURL: "https://api.discogs.com/users/lincolnwisely/wants&page=1&per_page=18" 
 });
 
 export default function WishList()  {
@@ -55,6 +55,12 @@ export default function WishList()  {
   };
 
 
+  const config = {
+    headers:{
+      'Content-Type': 'application/json',
+      "Authorization": "Discogs key=vFyJrqHWRBnpgvvXUkco, secret=fIyvkSIOTpqWKiSaDwMAWGsbVUnLVwwL"
+    }
+  };
 
    const [items, setItems] = useState();
    useEffect(() => {

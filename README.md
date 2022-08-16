@@ -9,10 +9,6 @@ Create a homepage using Gatsby and Sanity. This starter demonstrates how to use 
 [View the Demo](https://gatsbysanityhomepage.gatsbyjs.io/)
 
 
-### Goddamnit 
-I need to add this as the first element in the <head> tag:
-`<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-72917900-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag('js', new Date());gtag('config', 'UA-72917900-1');</script>`
-
 **Note:**
 This version of the Sanity homepage starter is written in JavaScript. If you want to use Sanity but TypeScript is more your style, there is also a TypeScript version maintained on [GitHub](https://github.com/gatsbyjs/gatsby-starter-sanity-homepage-ts).
 

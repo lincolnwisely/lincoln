@@ -48,14 +48,6 @@ export default function StatList(props) {
         </Flex>
       </Section>
     </Container>
-    <Container>
-      
-      <Section>
-        <Container>
-          <WishList/>
-          </Container>
-      </Section>
-    </Container>
     </>
   )
 }
