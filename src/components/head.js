@@ -4,7 +4,7 @@ import { Script } from "gatsby"
 
 export default function Head({ title, description, image }) {
   title = "Lincoln Wisely | Le Website"
-  description = "Hi, I'm Lincoln Wisely, a developer based in St. Louis. This is my site built with GatsbyJS and Sanity.io"
+  description = "Hi, I'm Lincoln Wisely, a software dev based in St. Louis. This is my site built with GatsbyJS and Sanity.io"
   return (
     <Helmet>
       <Script
