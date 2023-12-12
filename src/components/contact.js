@@ -50,7 +50,7 @@ const handleSubmit = (event) => {
   />
   <div>
    <input 
-  type="checkbox" required name="anxietyClause" readOnly checked />
+  type="checkbox" required name="anxietyClause" />
         <label className={styles.checkboxLabel} htmlFor="anxietyClause">I understand that I may never hear back</label></div>
 
     <button className={styles.button} type="submit">Submit</button>

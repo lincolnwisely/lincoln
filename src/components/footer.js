@@ -42,7 +42,7 @@ const socialMedia = {
     icon: <Facebook />,
   },
   LINKEDIN: {
-    url: "https://linkedin.com/in/",
+    url: "https://linkedin.com/in",
     name: "linkedin",
     icon: <Linkedin />,
   },

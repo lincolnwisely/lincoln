@@ -2,6 +2,6 @@
 !.env.EXAMPLE
 node_modules
 .cache
-public
+# public
 dist
 .DS_Store
